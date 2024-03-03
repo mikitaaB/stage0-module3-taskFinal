@@ -2,9 +2,13 @@ package lang.print.gaps.finalModuleTask;
 
 public class NumberReverter {
     public void revert(int number) {
-        int aValue = number % 10;
-        int bValue = (number / 10) % 10;
-        int cValue = number / 100;
-        System.out.println((aValue * 100) + (bValue * 10) + cValue);
+        int num = number;
+        int reversed = 0;
+        while (num != 0) {
+            int digit = num % 10;
+            reversed = reversed * 10 + digit;
+            num = num / 10;
+        }
+        System.out.println(reversed);
     }
 }
